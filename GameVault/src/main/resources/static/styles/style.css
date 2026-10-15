@@ -1,0 +1,104 @@
+:root {
+    --bg: #0f1220;
+    --surface: #1a1f36;
+    --primary: #7c5cff;
+    --accent: #00c2ff;
+    --success: #2ecc71;
+    --danger: #e4b363;
+    --text: #e8eaf6;
+    --text-muted: #9aa0c3;
+    --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ---------- Navegación ---------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px;
+    background: var(--surface);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.nav-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color .2s;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* ---------- Contenedor y paneles ---------- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+.panel {
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ---------- Catálogo ---------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-primary {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    color: white;
+    font-weight: 600;
+}
+.btn-primary:hover { filter: brightness(1.1); }
+
+/* ---------- Formularios ---------- */
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; margin-bottom: 6px; font-weight: 600; }
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.form-control:focus { outline: 2px solid var(--primary); }
